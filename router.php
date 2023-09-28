@@ -1,5 +1,5 @@
 <?php
-
+require_once 'app/controllers/home.controller.php';
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
 
@@ -15,7 +15,10 @@ $params = explode('/', $action);
 
 //determina que camino seguir segun la accion
 switch($params[0]){
-    
+    case 'home':
+        $homeController = new homeController();
+        $homeController->showHome();
+        break;
 
     default:
         echo('404 page not found');
