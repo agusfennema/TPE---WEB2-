@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-29 15:13:48
+/* Smarty version 4.3.2, created on 2023-09-29 15:53:50
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6516cd8cd19360_59494810',
+  'unifunc' => 'content_6516d6eeb7a938_53451032',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d8e7c9b40bd23cff522df4e4dfdf68b41e6e79b' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/products.tpl',
-      1 => 1695993227,
+      1 => 1695993233,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6516cd8cd19360_59494810 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6516d6eeb7a938_53451032 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <table class="table">
