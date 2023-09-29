@@ -1,5 +1,8 @@
 <?php
 require_once 'app/controllers/home.controller.php';
+require_once 'app/controllers/products.controller.php';
+
+
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
 
@@ -19,7 +22,10 @@ switch($params[0]){
         $homeController = new homeController();
         $homeController->showHome();
         break;
-
+    case 'products':
+        $productsController = new productsController();
+        $productsController->showProducts();
+        break;
     default:
         echo('404 page not found');
         break;
