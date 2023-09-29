@@ -12,15 +12,12 @@
       </tr>
     </thead>
     <tbody>
-    {foreach from=$products item=$product}
+    {foreach from=$categories item=$categoria}
       <tr>
-      <td>{$product->ID_producto}</td>
-      <td>{$product->TIPO}</td>
-      <td>{$product->TALLE}</td>
-      <td><span>$</span>{$product->PRECIO}</td>
+      <td>{$categoria->ID_categoria}</td>
+      <td>{$categoria->TIPO_DE_PRENDA}</td>
       <td><a href='detalle/{$product->ID_producto}' type='button'>Detalles</a></td>
       </tr>
       {/foreach}
     </tbody>
   </table>
-  {include file="formAddProduct.tpl"}

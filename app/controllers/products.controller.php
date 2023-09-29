@@ -14,5 +14,18 @@ class productsController {
     public function showProducts(){
         $products = $this->model->getProducts();
         $this->view->showProducts($products);
-      }
+    }
+
+    function addProducts() {
+        // TODO: validar entrada de datos
+        $ID_producto = $_POST['ID_producto'];
+        $TIPO = $_POST['TIPO'];
+        $TALLE = $_POST['TALLE'];
+        $PRECIO = $_POST['PRECIO'];
+        
+  
+        $this->model->insertProduct($ID_producto, $TIPO, $TALLE, $PRECIO);
+  
+        header("Location: " . BASE_URL. "products"); 
+    }
 }

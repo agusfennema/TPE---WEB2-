@@ -14,4 +14,11 @@ class productsModel {
         $products = $query->fetchAll(PDO::FETCH_OBJ);
         return $products;
     }
+
+    public function insertProduct($ID_producto, $TIPO, $TALLE, $PRECIO) {
+        $query = $this->db->prepare("INSERT INTO producto (ID_producto, TIPO, TALLE, PRECIO) VALUES (?, ?, ?, ?)");
+        $query->execute([$ID_producto, $TIPO, $TALLE, $PRECIO]);
+
+        return $this->db->lastInsertId();
+    }
 }

@@ -4,6 +4,7 @@
     <base href="{BASE_URL}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/ropa-de-mujer.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <title>Annyvia</title>
 </head>
@@ -17,9 +18,9 @@
                 <li class="dropdown">
                     <a href="categories">Categories</a>
                     <div class="dropdown-content">
-                        <a href="#">Category 1</a>
-                        <a href="#">Category 2</a>
-                        <a href="#">Category 3</a>
+                        <a href="#">Remeras</a>
+                        <a href="#">Pantalones</a>
+                        <a href="#">Buzos</a>
                     </div>
                 </li>
             </ul>
