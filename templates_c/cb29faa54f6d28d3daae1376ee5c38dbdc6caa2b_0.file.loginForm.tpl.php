@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-03 18:09:50
+/* Smarty version 4.3.2, created on 2023-10-03 18:14:56
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/loginForm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651c3cceacda54_82373586',
+  'unifunc' => 'content_651c3e0046a7b7_12788991',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb29faa54f6d28d3daae1376ee5c38dbdc6caa2b' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/loginForm.tpl',
-      1 => 1696349355,
+      1 => 1696349643,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_651c3cceacda54_82373586 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651c3e0046a7b7_12788991 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -33,7 +33,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             <input type="text" name="username"><br>
             <label for="password">Password</label><br>
             <input type="password" name="password"><br>
-            <div class="btn">
+            <div class="btn-login">
                 <button type="submit" class="btn-form-login">Login</button>
             </div>
         </div>
