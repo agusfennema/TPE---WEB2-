@@ -37,11 +37,12 @@ th {
 }
 
 .formulario {
+    width: 30vw;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     padding-top: 3rem;
+    flex-direction: column;
+    margin-left: 35%;
 }
 
 .sub-form {
@@ -55,6 +56,7 @@ th {
     rgba(0, 0, 0, 0,3) 0px 8px 16px -8px;
     background-color: white;
 }
+
 
 h2 {
     margin: 1.5rem 0 2rem 0;
@@ -87,6 +89,7 @@ input:focus {
     opacity: 0-7;
 }
 
+
 .btn-form-login {
     padding: 12px 48px;
     border-radius: 50px;
@@ -97,6 +100,7 @@ input:focus {
     border-width: 0;
     background-color: #1A1B27;
     font-weight: 600;
+    width: 100%;
 }
 
 .btn-form-login:hover {
@@ -240,9 +244,13 @@ input:focus {
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 6rem;
     margin-bottom: 20px;
-    color: #000;
+    background: linear-gradient(to right, #d4e91a, #0111187a); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .hero p {

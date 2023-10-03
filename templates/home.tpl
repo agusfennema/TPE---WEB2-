@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 <section class="hero">
     <div class="hero-content">
-        <h1>Bienvenido a Nuestra Tienda de Ropa</h1>
+        <h1>ANNYVIA</h1>
         <p>Encuentra las últimas tendencias en moda</p>
         <button class="shop-btn">Comprar Ahora</button>
     </div>
