@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<div class="form">
+<div class="formulario">
     <form action="#" class="sub-form">
         <div class="upper-form">
             <h2>Login Form</h2>

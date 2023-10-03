@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-03 18:21:58
+/* Smarty version 4.3.2, created on 2023-10-03 21:16:24
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/loginForm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651c3fa63b3c24_65332405',
+  'unifunc' => 'content_651c68882e8a57_73760635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb29faa54f6d28d3daae1376ee5c38dbdc6caa2b' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/loginForm.tpl',
-      1 => 1696350041,
+      1 => 1696360580,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_651c3fa63b3c24_65332405 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651c68882e8a57_73760635 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<div class="form">
+<div class="formulario">
     <form action="#" class="sub-form">
         <div class="upper-form">
             <h2>Login Form</h2>
@@ -42,5 +42,6 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             <a href="#" class="signup">Signup</a>
         </div>
     </form>
-</div><?php }
+</div>
+<?php }
 }
