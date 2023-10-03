@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Nunito:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&family=Tilt+Neon&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: linear-gradient(45deg, #21D4FD 0%, #B721FF 100%);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.sub-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 70vh;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0,25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0,3) 0px 8px 16px -8px;
+    background-color: white;
+}
+
+h2 {
+    margin: 1.5rem 0 2rem 0;
+    text-align: center;
+}
+
+label {
+    padding-left: 16px;
+    opacity: 0.75;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+input {
+    display: flex;
+    border-radius: 50px;
+    border-style: none;
+    outline: none;
+    margin-top: 8px;
+    padding: 12px 24px;
+    width: 250px;
+    background-color: #EAEEED;
+}
+
+input:focus {
+    opacity: 0-7;
+}
+
+.btn-form-login {
+    padding: 12px 48px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+    outline: none;
+    border-width: 0;
+    background-color: #1A1B27;
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-form-login:hover {
+    opacity: 0.8;
+}
+
+.button-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.signup {
+    padding-left: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #21D4FD;
+}
+
+.signup:hover {
+    opacity: 0.8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ff5722; /* Cambia el color al pasar el ratón */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn{
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+
+.btn:hover{
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before{
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+
+/* Estilos para la sección Hero */
+.hero {
+    /*background-image: url('hero-background.jpg');*/
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.shop-btn {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #d84315;
+}
+
+/* Estilos para la sección Featured Products */
+.featured-products {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.featured-products h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.product {
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+.product img {
+    max-width: 100%;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}

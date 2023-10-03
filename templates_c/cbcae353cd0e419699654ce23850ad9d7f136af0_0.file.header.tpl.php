@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-02 23:04:18
+/* Smarty version 4.3.2, created on 2023-10-03 17:49:37
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651b30526641c8_44017883',
+  'unifunc' => 'content_651c3811ad0d10_64263266',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbcae353cd0e419699654ce23850ad9d7f136af0' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl',
-      1 => 1696016958,
+      1 => 1696348167,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_651b30526641c8_44017883 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651c3811ad0d10_64263266 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +28,10 @@ function content_651b30526641c8_44017883 (Smarty_Internal_Template $_smarty_tpl)
 ">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/ropa-de-mujer.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Nunito:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Annyvia</title>
 </head>
 <body>
