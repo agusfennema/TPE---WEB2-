@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-03 17:49:37
+/* Smarty version 4.3.2, created on 2023-10-03 18:23:22
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651c3811ad0d10_64263266',
+  'unifunc' => 'content_651c3ffa516b34_16316562',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbcae353cd0e419699654ce23850ad9d7f136af0' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl',
-      1 => 1696348167,
+      1 => 1696350142,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_651c3811ad0d10_64263266 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651c3ffa516b34_16316562 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +50,7 @@ function content_651c3811ad0d10_64263266 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </li>
             </ul>
-            <button class="btn">Login</button>
+            <button class="btn"><a href="login">Login</a></button>
         </nav>
     </header><?php }
 }

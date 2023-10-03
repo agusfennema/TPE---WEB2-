@@ -175,6 +175,10 @@ input:focus {
     box-shadow: 0 2px 0 2px #000;
 }
 
+.btn a {
+    text-decoration: none;
+}
+
 .btn::before{
     content: "";
     position: absolute;
