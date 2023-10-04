@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-04 15:54:02
+/* Smarty version 4.3.2, created on 2023-10-04 17:55:18
   from 'C:\xampp\htdocs\TPE-WEB2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651d6e7a2c73d5_82987447',
+  'unifunc' => 'content_651d8ae674e928_11558199',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '50b53446220266a7cf83d2b5b797f20c472ff5b9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE-WEB2\\templates\\header.tpl',
-      1 => 1696426919,
+      1 => 1696434804,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_651d6e7a2c73d5_82987447 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651d8ae674e928_11558199 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,9 +44,11 @@ function content_651d6e7a2c73d5_82987447 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="dropdown">
                     <a href="categories">Categories</a>
                     <div class="dropdown-content">
-                        <a href="#">Remeras</a>
-                        <a href="#">Pantalones</a>
-                        <a href="#">Buzos</a>
+                        <a href="categories">Remeras</a>
+                        <a href="categories">Pantalones</a>
+                        <a href="categories">Buzos</a>
+                        <a href="categories">Camperas</a>
+                        <a href="categories">Jeans</a>
                     </div>
                 </li>
             </ul>

@@ -20,9 +20,11 @@
                 <li class="dropdown">
                     <a href="categories">Categories</a>
                     <div class="dropdown-content">
-                        <a href="#">Remeras</a>
-                        <a href="#">Pantalones</a>
-                        <a href="#">Buzos</a>
+                        <a href="categories">Remeras</a>
+                        <a href="categories">Pantalones</a>
+                        <a href="categories">Buzos</a>
+                        <a href="categories">Camperas</a>
+                        <a href="categories">Jeans</a>
                     </div>
                 </li>
             </ul>
