@@ -24,6 +24,22 @@
         <h3>Producto 3</h3>
         <p>Descripción del producto 3.</p>
     </div>
+    <div class="product">
+        <img src="product4.jpg" alt="Producto 4">
+        <h3>Producto 4</h3>
+        <p>Descripción del producto 4.</p>
+    </div>
+    <div class="product">
+        <img src="product5.jpg" alt="Producto 5">
+        <h3>Producto 5</h3>
+        <p>Descripción del producto 5.</p>
+    </div>
+    <div class="product">
+        <img src="product6.jpg" alt="Producto 6">
+        <h3>Producto 6</h3>
+        <p>Descripción del producto 6.</p>
+    </div>
 </section>
+{include file="footer.tpl"}
 </body>
 </html>

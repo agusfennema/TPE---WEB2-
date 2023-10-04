@@ -23,6 +23,7 @@ table {
     flex-direction: column;
     align-items: center;
     border-collapse: collapse;
+    padding-top: 50px;
 }
 
 td {
@@ -41,6 +42,7 @@ th {
     display: flex;
     align-items: center;
     padding-top: 3rem;
+    padding-bottom: 50px;
     flex-direction: column;
     margin-left: 35%;
 }
@@ -49,8 +51,10 @@ th {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 150px;
+    padding-top: 50px;
     width: 30vw;
-    height: 70vh;
+    height: 60vh;
     border-radius: 12px;
     box-shadow: rgba(50, 50, 93, 0,25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0,3) 0px 8px 16px -8px;
@@ -70,6 +74,11 @@ label {
 
 
 header {
+        position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;    
     background-color: #333;
     color: #fff;
 }
@@ -297,3 +306,76 @@ input:focus {
     font-size: 20px;
     margin: 10px 0;
 }
+
+
+/* Estilos generales del footer */
+.footer {
+    margin-top: 400px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  /* Estilos para los enlaces en el footer */
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #ff5500; /* Cambia de color al pasar el cursor */
+  }
+  
+  /* Estilos para la fila de derechos de autor */
+  .footer hr {
+    border-color: #666;
+  }
+  
+  .footer p.text-center {
+    font-size: 14px;
+  }
+  
+  /* Estilos para las listas de enlaces */
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos específicos para las redes sociales */
+  .footer ul.social-media {
+    padding-top: 20px;
+  }
+  
+  .footer ul.social-media li {
+    display: inline;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Estilos para la información de contacto */
+  .footer .contact-info h4 {
+    margin-top: 0;
+  }
+  
+  /* Estilos para las columnas del footer */
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el texto de derechos de autor */
+  .footer p.text-center {
+    font-size: 14px;
+  }
+  
+  /* Estilos para el texto de derechos de autor en dispositivos móviles */
+  @media (max-width: 768px) {
+    .footer p.text-center {
+      font-size: 12px;
+    }
+  }
+  
