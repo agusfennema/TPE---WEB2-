@@ -19,6 +19,8 @@
       <td>{$product->TALLE}</td>
       <td><span>$</span>{$product->PRECIO}</td>
       <td><a href='detalle/{$product->ID_producto}' type='button'>Detalles</a></td>
+      <td><a href='delete/{$product->ID_producto}' type='button'>Borrar</a></td> 
+      <td><a href='edit/{$product->ID_producto}' type='button'>Editar</a></td> 
       </tr>
       {/foreach}
     </tbody>

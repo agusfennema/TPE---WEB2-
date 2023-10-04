@@ -13,4 +13,12 @@ class productsView {
         $this->smarty->assign('products', $products);
         $this->smarty->display('products.tpl');
     }
+
+    function showFormEdit() {
+        $this->smarty->display('templates/formEdit.tpl');
+    }
+
+    function showEdit($productById) {
+        $this->smarty->assign('productById', $productById);
+    }
 }
