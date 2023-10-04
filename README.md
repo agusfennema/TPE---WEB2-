@@ -16,6 +16,9 @@ Código SQL: https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/come
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
+=======
 >>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
 =======
 >>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
