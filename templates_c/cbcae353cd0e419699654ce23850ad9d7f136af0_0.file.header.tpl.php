@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-03 18:23:22
+/* Smarty version 4.3.2, created on 2023-10-04 18:27:18
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651c3ffa516b34_16316562',
+  'unifunc' => 'content_651d92665d2f95_41038958',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbcae353cd0e419699654ce23850ad9d7f136af0' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl',
-      1 => 1696350142,
+      1 => 1696436837,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_651c3ffa516b34_16316562 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651d92665d2f95_41038958 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +31,7 @@ function content_651c3ffa516b34_16316562 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Nunito:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Annyvia</title>
 </head>
 <body>
@@ -44,9 +44,11 @@ function content_651c3ffa516b34_16316562 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="dropdown">
                     <a href="categories">Categories</a>
                     <div class="dropdown-content">
-                        <a href="#">Remeras</a>
-                        <a href="#">Pantalones</a>
-                        <a href="#">Buzos</a>
+                        <a href="categories">Remeras</a>
+                        <a href="categories">Pantalones</a>
+                        <a href="categories">Buzos</a>
+                        <a href="categories">Camperas</a>
+                        <a href="categories">Jeans</a>
                     </div>
                 </li>
             </ul>

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Nunito:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Annyvia</title>
 </head>
 <body>
@@ -20,9 +20,11 @@
                 <li class="dropdown">
                     <a href="categories">Categories</a>
                     <div class="dropdown-content">
-                        <a href="#">Remeras</a>
-                        <a href="#">Pantalones</a>
-                        <a href="#">Buzos</a>
+                        <a href="categories">Remeras</a>
+                        <a href="categories">Pantalones</a>
+                        <a href="categories">Buzos</a>
+                        <a href="categories">Camperas</a>
+                        <a href="categories">Jeans</a>
                     </div>
                 </li>
             </ul>
