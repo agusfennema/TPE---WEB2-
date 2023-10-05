@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-04 17:46:52
+/* Smarty version 4.3.2, created on 2023-10-04 23:37:34
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651d88ec8ac798_30256496',
+  'unifunc' => 'content_651ddb1e351a28_05467250',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d8e7c9b40bd23cff522df4e4dfdf68b41e6e79b' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/products.tpl',
-      1 => 1696434217,
+      1 => 1696455374,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:formAddProduct.tpl' => 1,
   ),
 ),false)) {
-function content_651d88ec8ac798_30256496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_651ddb1e351a28_05467250 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <table class="table">
@@ -58,7 +58,7 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
       <td><a href='delete/<?php echo $_smarty_tpl->tpl_vars['product']->value->ID_producto;?>
 ' type='button'>Borrar</a></td> 
       <td><a href='edit/<?php echo $_smarty_tpl->tpl_vars['product']->value->ID_producto;?>
-' type='button'>Editar</a></td> 
+' type='button'>Editar</a></td>
       </tr>
       <?php
 }

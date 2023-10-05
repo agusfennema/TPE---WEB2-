@@ -4,8 +4,8 @@ class loginHelper {
 
     public function login ($usuarios){
         session_start();
-        $_SESSION['USER_ID'] = $usuarios->id;
-        $_SESSION['USER_EMAIL'] = $usuarios->email;
+        $_SESSION['USER_ID'] = $usuarios->ID_usuario;
+        $_SESSION['USER_EMAIL'] = $usuarios->EMAIL;
         $_SESSION['ISLOGGED'] = true;
     }
     /**

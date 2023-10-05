@@ -28,9 +28,7 @@ class productsModel {
 /* INSERTA UN PRODUCTO */
     public function insertProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO) {
         $query = $this->db->prepare("INSERT INTO producto (ID_producto, ID_categoria_fk, TIPO, TALLE, PRECIO) VALUES (?, ?, ?, ?, ?)");
-// se prepara la insercion de todas las columnas
         $query->execute([$ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO]);
-// inserta valores nuevos al registro de la tabla
         return $this->db->lastInsertId();
     }
 
@@ -41,10 +39,18 @@ class productsModel {
     }
 
 // FUNCION PARA ACTUALIZAR LOS PRODUCTOS DE LA TABLA
-    public function updateProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO) {
+    public function updateProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO, $ID_producto) {
         $query = $this->getProductById($ID_producto);
         $query = $this->db->prepare("UPDATE producto SET ID_categoria_fk=?, TIPO=?, TALLE=?, PRECIO=? WHERE ID_producto=?");
         $query->execute([$ID_categoria_fk, $TIPO, $TALLE, $PRECIO, $ID_producto]);
+    }
+
+
+    public function getproductDetails($ID_producto){
+        $query = $this->db->prepare("SELECT * FROM categoria WHERE DETALLE=?");
+        $query->execute([$ID_producto]);
+        $productById = $query->fetchAll(PDO::FETCH_OBJ);
+        return $productById;
     }
 
 }

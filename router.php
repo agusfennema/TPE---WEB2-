@@ -40,6 +40,14 @@ switch($params[0]){
         $loginController = new loginController();
         $loginController->showLogin();     
         break;
+    case 'logout':
+        $loginController = new loginController();
+        $loginController->userLogout();
+        break;
+    case 'validate':
+        $loginController = new loginController();
+        $loginController->userValidate();
+        break;    
     case 'delete':
         $productsController = new productsController();
         $ID_producto = $params[1];
@@ -50,7 +58,12 @@ switch($params[0]){
         $productsController->showFormEdit();
         $ID_producto = $params[1];
         $productsController->editProduct($ID_producto);
-        break;      
+        break;  
+    case 'detalle':
+        $productsController = new productsController();
+        $ID_producto = $params[1];
+        $productsController->showProductDetails($ID_producto);
+        break;       
     default:
         echo('404 page not found');
         break;

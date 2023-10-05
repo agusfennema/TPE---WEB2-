@@ -1,13 +1,13 @@
 {include file="header.tpl"}
 
 <div class="formulario">
-    <form action="#" class="sub-form">
+    <form action="validate" method="POST" class="sub-form">
         <div class="upper-form">
             <h2>Login Form</h2>
             <label for="username">Username</label><br>
-            <input type="text" name="username"><br>
+            <input type="text" name="EMAIL"><br>
             <label for="password">Password</label><br>
-            <input type="password" name="password"><br>
+            <input type="password" name="PASSWORD"><br>
             <div class="btn-login">
                 <button type="submit" class="btn-form-login">Login</button>
             </div>

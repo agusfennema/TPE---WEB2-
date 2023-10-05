@@ -1,23 +1,32 @@
 <?php
 require_once 'app/models/products.model.php';
 require_once 'app/views/products.view.php';
+require_once 'app/helpers/login.helper.php';
 
 class productsController {
     private $model;
     private $view;
+    private $helper;
 
     public function __construct(){
         $this->model = new productsModel();
         $this->view = new productsView();
+        $this->helper = new loginHelper();
     }
+
 /* OBTIENE LOS PRODUCTOS DEL MODEL (getProducts) Y LOS ASIGNA A LA FUNCION DE LA VIEW (showProducts)*/
     public function showProducts(){
         $products = $this->model->getProducts();
         $this->view->showProducts($products);
     }
-/* GUARDA EN VARIABLES LOS DATOS QUE VIENEN POR EL FORMULARIO Y LOS INSERTA */
+
+    public function showProductDetails($ID_producto){
+        $productDetails = $this->model->getproductDetails($ID_producto);
+        $this->view->showDetails($productDetails);
+      }
+
     function addProducts() {
-        // TODO: validar entrada de datos
+        // validar entrada de datos
         $ID_producto = $_POST['ID_producto'];
         $ID_categoria_fk = $_POST['ID_categoria_fk'];
         $TIPO = $_POST['TIPO'];
@@ -26,7 +35,6 @@ class productsController {
         
   
         $this->model->insertProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
-// se ejecuta la funcion insertar para agregar nuevos valores a la tabla
         header("Location: " . BASE_URL. "products"); 
     }
 
@@ -37,6 +45,7 @@ class productsController {
     }
 
     function showFormEdit() {
+        session_start();
         $this->view->showFormEdit();
     }
 
@@ -49,7 +58,7 @@ class productsController {
             $TIPO = $_POST['TIPO'];
             $TALLE = $_POST['TALLE'];
             $PRECIO = $_POST['PRECIO'];
-            $ID_producto = this->model->updateProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
+            $ID_producto = this->model->updateProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO, $ID_producto);
             header("Location: " . BASE_URL. "products"); 
         }
     }
