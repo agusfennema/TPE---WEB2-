@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-04 23:37:34
+/* Smarty version 4.3.2, created on 2023-10-09 21:31:03
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651ddb1e351a28_05467250',
+  'unifunc' => 'content_652454f7440a28_73506310',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d8e7c9b40bd23cff522df4e4dfdf68b41e6e79b' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/products.tpl',
-      1 => 1696455374,
+      1 => 1696879856,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:formAddProduct.tpl' => 1,
   ),
 ),false)) {
-function content_651ddb1e351a28_05467250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652454f7440a28_73506310 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+if ('logged') {?>
 <table class="table">
     <thead>
       <tr>
@@ -66,5 +66,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </tbody>
   </table>
   <?php $_smarty_tpl->_subTemplateRender("file:formAddProduct.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <?php }
 }
 }

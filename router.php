@@ -2,7 +2,7 @@
 require_once 'app/controllers/home.controller.php';
 require_once 'app/controllers/products.controller.php';
 require_once 'app/controllers/categories.controller.php';
-require_once 'app/controllers/login.controller.php';
+require_once 'app/controllers/auth.controller.php';
 
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -37,16 +37,16 @@ switch($params[0]){
         $productsController->addProducts();
         break;    
     case 'login':
-        $loginController = new loginController();
-        $loginController->showLogin();     
+        $authController = new authController();
+        $authController->showLogin();     
         break;
     case 'logout':
-        $loginController = new loginController();
-        $loginController->userLogout();
+        $authController = new authController();
+        $authController->userLogout();
         break;
     case 'validate':
-        $loginController = new loginController();
-        $loginController->userValidate();
+        $authController = new authController();
+        $authController->auth();
         break;    
     case 'delete':
         $productsController = new productsController();

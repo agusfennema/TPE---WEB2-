@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+{if logged}
 <table class="table">
     <thead>
       <tr>
@@ -26,3 +27,4 @@
     </tbody>
   </table>
   {include file="formAddProduct.tpl"}
+  {/if}

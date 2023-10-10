@@ -1,6 +1,6 @@
 <?php
 
-class loginModel {
+class authModel {
 
     private $db;
 
@@ -8,9 +8,9 @@ class loginModel {
         $this->db = new PDO('mysql:host=localhost;'.'dbname=tienda;charset=utf8', 'root', '');
     }
 
-    public function getUsuario($email) {
+    public function getByEmail($user) {
         $query = $this->db->prepare("SELECT * FROM usuarios WHERE email = ?");
-        $query->execute([$email]);
+        $query->execute([$user]);
         return $query->fetch(PDO::FETCH_OBJ);
     }
 

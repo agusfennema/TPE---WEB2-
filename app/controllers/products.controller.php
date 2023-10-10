@@ -1,7 +1,7 @@
 <?php
 require_once 'app/models/products.model.php';
 require_once 'app/views/products.view.php';
-require_once 'app/helpers/login.helper.php';
+require_once 'app/helpers/auth.helper.php';
 
 class productsController {
     private $model;
@@ -9,6 +9,7 @@ class productsController {
     private $helper;
 
     public function __construct(){
+        authHelper::verify();
         $this->model = new productsModel();
         $this->view = new productsView();
         $this->helper = new loginHelper();
