@@ -2,7 +2,7 @@
 require_once 'app/controllers/home.controller.php';
 require_once 'app/controllers/products.controller.php';
 require_once 'app/controllers/categories.controller.php';
-require_once 'app/controllers/login.controller.php';
+require_once 'app/controllers/auth.controller.php';
 
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -37,6 +37,17 @@ switch($params[0]){
         $productsController->addProducts();
         break;    
     case 'login':
+        $authController = new authController();
+        $authController->showLogin();     
+        break;
+    case 'logout':
+        $authController = new authController();
+        $authController->userLogout();
+        break;
+    case 'validate':
+        $authController = new authController();
+        $authController->auth();
+        break;    
         $loginController = new loginController();
         $loginController->showLogin();     
         break;
@@ -50,7 +61,12 @@ switch($params[0]){
         $productsController->showFormEdit();
         $ID_producto = $params[1];
         $productsController->editProduct($ID_producto);
-        break;      
+        break;  
+    case 'detalle':
+        $productsController = new productsController();
+        $ID_producto = $params[1];
+        $productsController->showProductDetails($ID_producto);
+        break;       
     default:
         echo('404 page not found');
         break;
