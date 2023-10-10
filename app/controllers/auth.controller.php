@@ -10,8 +10,8 @@ class authController{
     private $helper;
     
     public function __construct() {
-        $this->model = new authModel();
         $this->view = new authView();
+        $this->model = new authModel();
         $this->helper = new authHelper();
         if(session_status() != PHP_SESSION_ACTIVE){
             session_start(); //verifica que haya un inicio de sesion
@@ -23,7 +23,7 @@ class authController{
 
     public function auth() {
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = $_POST['PASSWORD'];
 
         if (empty($email) || empty($password)) {
             $this->view->showLogin('Faltan completar datos');
