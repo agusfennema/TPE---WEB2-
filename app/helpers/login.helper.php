@@ -1,3 +1,4 @@
+Se usó un 85 % del almacenamiento … Si tu almacenamiento se acaba, no podrás crear archivos, editarlos o subirlos. Obtén 100 GB de almacenamiento por US$ 1,99 US$ 0,99 durante 1 mes.
 <?php
 // funcion extra de login, no cuenta como controller ni model
 class loginHelper {
