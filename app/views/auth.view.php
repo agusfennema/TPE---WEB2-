@@ -2,7 +2,7 @@
 require_once 'libs/smarty/libs/Smarty.class.php';
 
 
-class loginView {
+class authView {
     private $smarty;
 
     public function __construct() {

@@ -21,4 +21,9 @@ class productsView {
     function showEdit($productById) {
         $this->smarty->assign('productById', $productById);
     }
+
+    function showDetails($productById){
+        $this->smarty->assign('productById', $productById);
+        $this->smarty->display('details.tpl');
+    }
 }
