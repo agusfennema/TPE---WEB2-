@@ -21,9 +21,12 @@ class productsView {
     function showEdit($productById) {
         $this->smarty->assign('productById', $productById);
     }
+<<<<<<< HEAD
 
     function showDetails($productById){
         $this->smarty->assign('productById', $productById);
         $this->smarty->display('details.tpl');
     }
+=======
+>>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
 }

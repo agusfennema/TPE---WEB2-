@@ -36,6 +36,10 @@ class productsController {
         
   
         $this->model->insertProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
+<<<<<<< HEAD
+=======
+// se ejecuta la funcion insertar para agregar nuevos valores a la tabla
+>>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
         header("Location: " . BASE_URL. "products"); 
     }
 
@@ -46,7 +50,10 @@ class productsController {
     }
 
     function showFormEdit() {
+<<<<<<< HEAD
         session_start();
+=======
+>>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
         $this->view->showFormEdit();
     }
 
@@ -59,7 +66,11 @@ class productsController {
             $TIPO = $_POST['TIPO'];
             $TALLE = $_POST['TALLE'];
             $PRECIO = $_POST['PRECIO'];
+<<<<<<< HEAD
             $ID_producto = this->model->updateProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO, $ID_producto);
+=======
+            $ID_producto = this->model->updateProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
+>>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
             header("Location: " . BASE_URL. "products"); 
         }
     }

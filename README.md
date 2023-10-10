@@ -7,3 +7,7 @@ Descripción: Nuestra página web es una tienda de indumentaria unisex, la cual 
 Diagrama DER: https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/DiagramaDER-Web2.png
 
 Código SQL: https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/comercial.sql
+<<<<<<< HEAD
+=======
+
+>>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
