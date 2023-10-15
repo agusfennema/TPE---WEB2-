@@ -19,16 +19,17 @@ class productsModel {
 /* OBTIENE PRODUCTOS POR ID */
     function getProductById($ID_producto){
         $query = $this->db->prepare('SELECT * FROM producto WHERE ID_producto=?');
-        $query->execute($ID_producto);
+        $query->execute([$ID_producto]);
         $productById = $query->fetch(PDO::FETCH_OBJ);
 
         return $productById;
     }
 
+
 /* INSERTA UN PRODUCTO */
-    public function insertProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO) {
-        $query = $this->db->prepare("INSERT INTO producto (ID_producto, ID_categoria_fk, TIPO, TALLE, PRECIO) VALUES (?, ?, ?, ?, ?)");
-        $query->execute([$ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO]);
+    public function insertProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO) {
+        $query = $this->db->prepare('INSERT INTO producto (ID_categoria_fk, TIPO, TALLE, PRECIO) VALUES (?, ?, ?, ?)');
+        $query->execute([$ID_categoria_fk, $TIPO, $TALLE, $PRECIO]);
 
         return $this->db->lastInsertId();
     }
@@ -38,18 +39,19 @@ class productsModel {
         $query = $this->db->prepare("DELETE FROM producto WHERE ID_producto = ?");
         $query->execute([$ID_producto]);
     }
-
+    
 // FUNCION PARA ACTUALIZAR LOS PRODUCTOS DE LA TABLA
-    public function updateProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO) {
+    public function updateProduct($TIPO, $TALLE, $PRECIO, $ID_producto) {
         $query = $this->getProductById($ID_producto);
-        $query = $this->db->prepare("UPDATE producto SET ID_categoria_fk=?, TIPO=?, TALLE=?, PRECIO=? WHERE ID_producto=?");
-        $query->execute([$ID_categoria_fk, $TIPO, $TALLE, $PRECIO, $ID_producto]);
+        $query = $this->db->prepare('UPDATE producto SET TIPO=?, TALLE=?, PRECIO=? WHERE ID_producto=?');
+        $query->execute([$TIPO, $TALLE, $PRECIO, $ID_producto]);
     }
 
     public function getproductDetails($ID_producto){
-        $query = $this->db->prepare("SELECT * FROM categoria WHERE DETALLE=?");
+        $query = $this->db->prepare("SELECT * FROM producto WHERE ID_producto = ?");
         $query->execute([$ID_producto]);
-        $productById = $query->fetchAll(PDO::FETCH_OBJ);
+        $productById = $query->fetchAll(PDO::FETCH_OBJ);    
+        
         return $productById;
     }
 }
