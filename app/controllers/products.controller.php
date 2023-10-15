@@ -9,7 +9,6 @@ class productsController {
     private $helper;
 
     public function __construct(){
-        authHelper::verify();
         $this->model = new productsModel();
         $this->view = new productsView();
         $this->helper = new authHelper();
@@ -28,6 +27,7 @@ class productsController {
 
     function addProducts() {
         // validar entrada de datos
+        authHelper::verify();
         $ID_categoria_fk = $_POST['ID_categoria_fk'];
         $TIPO = $_POST['TIPO'];
         $TALLE = $_POST['TALLE'];
@@ -39,6 +39,7 @@ class productsController {
 
 // Funcion borrar producto
     function deleteProduct($ID_producto) {
+        authHelper::verify();
         $this->model->deleteProductById($ID_producto);
         header("Location: " . BASE_URL. "products"); 
     }
@@ -48,16 +49,21 @@ class productsController {
     }
 
     public function editProduct($ID_producto) {
+        authHelper::verify();
         $productById = $this->model->getProductById($ID_producto);
         $this->view->showFormEdit($ID_producto);
-        if(!empty($_POST['ID_producto']) && (!empty($_POST['TIPO']) && (!empty($_POST['TALLE']) && (!empty($_POST['PRECIO']))))) {
-            $ID_producto = $_POST['ID_producto'];
+        if((!empty($_POST['TIPO']) && (!empty($_POST['TALLE']) && (!empty($_POST['PRECIO']))))) {
             $TIPO = $_POST['TIPO'];
             $TALLE = $_POST['TALLE'];
             $PRECIO = $_POST['PRECIO'];
-
-            $ID_producto = this->model->updateProduct($TIPO, $TALLE, $PRECIO, $ID_producto);
-            header("Location: " . BASE_URL. "products"); 
+            
+            $ID_producto = $this->model->updateProduct($TIPO, $TALLE, $PRECIO, $ID_producto);
+            header('Location: ' . BASE_URL. 'products');
         }
+    }
+
+    function formEditProduct($ID_producto){
+        $productById = $this->model->getProductById($ID_producto);
+        $this->view->showFormEdit($productById);
     }
 }

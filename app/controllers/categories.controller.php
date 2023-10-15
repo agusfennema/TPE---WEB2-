@@ -8,7 +8,6 @@ class categoriesController {
     private $view;
 
     public function __construct(){
-        authHelper::verify();
         $this->model = new categoriesModel();
         $this->view = new categoriesView();
     }
