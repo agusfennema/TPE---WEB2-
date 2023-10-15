@@ -10,7 +10,6 @@ class authView {
     }
 
 function showLogin($error = null){
-
     $this->smarty->assign("error", $error);
     $this->smarty->display('loginForm.tpl');
 }
