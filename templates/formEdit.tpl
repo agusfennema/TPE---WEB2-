@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {include file="header.tpl"}
 
 <form class="form-edit" method="POST">
@@ -22,6 +21,3 @@
 </form>
 {include file="footer.tpl"}
 
-=======
-<h1>hola</h1>
->>>>>>> 7606daf98209a674aa9b47fb707f6d1a4ff710a0

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-15 23:49:09
+/* Smarty version 4.3.2, created on 2023-10-16 00:50:09
   from 'C:\xampp\htdocs\TPE---WEB2-\templates\formAddProduct.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_652c5e5549ba51_49235228',
+  'unifunc' => 'content_652c6ca1b3cf92_12453157',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5c655ae813b0f0647212970ed65f185f353dc888' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE---WEB2-\\templates\\formAddProduct.tpl',
-      1 => 1697317006,
+      1 => 1697410207,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652c5e5549ba51_49235228 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652c6ca1b3cf92_12453157 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <!-- Se crea un formulario para insertar nuevos productos a la tabla  -->
 <form class="formulario" action="add" method="POST">
     <div>

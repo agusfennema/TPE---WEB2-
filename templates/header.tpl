@@ -19,16 +19,6 @@
                 <li><a href="products">Products</a></li>
                 <li class="dropdown">
                     <a href="categories">Categories</a>
-<<<<<<< HEAD
-=======
-                    <div class="dropdown-content">
-                        <a href="categories">Remeras</a>
-                        <a href="categories">Pantalones</a>
-                        <a href="categories">Buzos</a>
-                        <a href="categories">Camperas</a>
-                        <a href="categories">Jeans</a>
-                    </div>
->>>>>>> 7606daf98209a674aa9b47fb707f6d1a4ff710a0
                 </li>
             </ul>
             {if !isset($smarty.session.USER_ID)}
