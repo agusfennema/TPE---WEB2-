@@ -28,6 +28,10 @@
                     </div>
                 </li>
             </ul>
+            {if !isset($smarty.session.USER_ID)}
             <button class="btn"><a href="login">Login</a></button>
+            {else}
+            <button class="btn"><a href="logout">Logout({$smarty.session.USER_EMAIL})</a></button>
+            {/if}
         </nav>
     </header>

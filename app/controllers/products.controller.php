@@ -12,7 +12,7 @@ class productsController {
         authHelper::verify();
         $this->model = new productsModel();
         $this->view = new productsView();
-        $this->helper = new loginHelper();
+        $this->helper = new authHelper();
     }
 
 /* OBTIENE LOS PRODUCTOS DEL MODEL (getProducts) Y LOS ASIGNA A LA FUNCION DE LA VIEW (showProducts)*/
@@ -28,18 +28,12 @@ class productsController {
 
     function addProducts() {
         // validar entrada de datos
-        $ID_producto = $_POST['ID_producto'];
         $ID_categoria_fk = $_POST['ID_categoria_fk'];
         $TIPO = $_POST['TIPO'];
         $TALLE = $_POST['TALLE'];
         $PRECIO = $_POST['PRECIO'];
-        
   
-        $this->model->insertProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
-<<<<<<< HEAD
-=======
-// se ejecuta la funcion insertar para agregar nuevos valores a la tabla
->>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
+        $this->model->insertProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
         header("Location: " . BASE_URL. "products"); 
     }
 
@@ -50,27 +44,19 @@ class productsController {
     }
 
     function showFormEdit() {
-<<<<<<< HEAD
-        session_start();
-=======
->>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
         $this->view->showFormEdit();
     }
 
     public function editProduct($ID_producto) {
         $productById = $this->model->getProductById($ID_producto);
         $this->view->showFormEdit($ID_producto);
-        if(!empty($_POST['ID_producto']) && (!empty($_POST['ID_categoria_fk']) && (!empty($_POST['TIPO']) && (!empty($_POST['TALLE']) && (!empty($_POST['PRECIO'])))))) {
+        if(!empty($_POST['ID_producto']) && (!empty($_POST['TIPO']) && (!empty($_POST['TALLE']) && (!empty($_POST['PRECIO']))))) {
             $ID_producto = $_POST['ID_producto'];
-            $ID_categoria_fk = $_POST['ID_categoria_fk'];
             $TIPO = $_POST['TIPO'];
             $TALLE = $_POST['TALLE'];
             $PRECIO = $_POST['PRECIO'];
-<<<<<<< HEAD
-            $ID_producto = this->model->updateProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO, $ID_producto);
-=======
-            $ID_producto = this->model->updateProduct($ID_producto, $ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
->>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
+
+            $ID_producto = this->model->updateProduct($TIPO, $TALLE, $PRECIO, $ID_producto);
             header("Location: " . BASE_URL. "products"); 
         }
     }

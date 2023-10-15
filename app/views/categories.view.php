@@ -13,4 +13,11 @@ class categoriesView {
         $this->smarty->assign('categories', $categories);
         $this->smarty->display('categories.tpl');
     }
+
+    function showResultFilter($ProductAndCategorie){
+        $this->smarty->assign('ProductAndCategorie', $ProductAndCategorie);
+        $this->smarty->display('filter.tpl');
+
+    }
+
 }

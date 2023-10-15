@@ -1,11 +1,7 @@
  <!-- Se crea un formulario para insertar nuevos productos a la tabla  -->
 <form class="formulario" action="add" method="POST">
-    <div >
-        <label class="form-label">ID Producto</label>
-        <input type="text" name="ID_producto" class="form-control">
-    </div>
     <div>
-        <label class="form-label">ID Categoria</label>
+        <label class="form-label">Categoria</label>
         <input type="text" name="ID_categoria_fk" class="form-control">
     </div>
       <div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-04 20:02:33
+/* Smarty version 4.3.2, created on 2023-10-12 00:35:16
   from '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_651da8b9e06d56_23776592',
+  'unifunc' => 'content_6527232401c835_07059789',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbcae353cd0e419699654ce23850ad9d7f136af0' => 
     array (
       0 => '/opt/lampp/htdocs/tpe2/TPE---WEB2-/templates/header.tpl',
-      1 => 1696442552,
+      1 => 1697063708,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_651da8b9e06d56_23776592 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6527232401c835_07059789 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +52,12 @@ function content_651da8b9e06d56_23776592 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </li>
             </ul>
+            <?php if (!(isset($_SESSION['USER_ID']))) {?>
             <button class="btn"><a href="login">Login</a></button>
+            <?php } else { ?>
+            <button class="btn"><a href="logout">Logout(<?php echo $_SESSION['USER_EMAIL'];?>
+)</a></button>
+            <?php }?>
         </nav>
     </header><?php }
 }

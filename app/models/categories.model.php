@@ -14,4 +14,13 @@ class categoriesModel {
         $categories = $query->fetchAll(PDO::FETCH_OBJ);
         return $categories;
     }
+
+
+    function getProductAndCategorie($selected){
+        $query = $this->db->prepare("SELECT * FROM producto a INNER JOIN  categoria b ON a.ID_categoria_fk = b.ID_categoria WHERE a.ID_categoria_fk=?");
+        $query->execute(array($selected));
+        $ProductAndCategorie = $query->fetchAll(PDO::FETCH_OBJ);
+
+        return $ProductAndCategorie;
+    }
 }

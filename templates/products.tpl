@@ -1,5 +1,5 @@
 {include file="header.tpl"}
-{if logged}
+
 <table class="table">
     <thead>
       <tr>
@@ -20,15 +20,13 @@
       <td>{$product->TALLE}</td>
       <td><span>$</span>{$product->PRECIO}</td>
       <td><a href='detalle/{$product->ID_producto}' type='button'>Detalles</a></td>
+      {if verify}
       <td><a href='delete/{$product->ID_producto}' type='button'>Borrar</a></td> 
-<<<<<<< HEAD
-      <td><a href='edit/{$product->ID_producto}' type='button'>Editar</a></td>
-=======
       <td><a href='edit/{$product->ID_producto}' type='button'>Editar</a></td> 
->>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
+      {/if}
       </tr>
       {/foreach}
     </tbody>
   </table>
   {include file="formAddProduct.tpl"}
-  {/if}
+  

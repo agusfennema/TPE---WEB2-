@@ -16,8 +16,17 @@
       <tr>
       <td>{$categoria->ID_categoria}</td>
       <td>{$categoria->TIPO_DE_PRENDA}</td>
-      <td><a href='detalle/{$product->ID_producto}' type='button'>Detalles</a></td>
+      <td>{$categoria->DETALLE}</td>
       </tr>
       {/foreach}
     </tbody>
   </table>
+  <h3> Selecciona una categoria</h3>
+  <form method="POST" action="filter">
+        <select name="selected" class="form-selected">                                              
+            {foreach from=$categories item=$categoria }
+                <option value="{$categoria->ID_categoria}">{$categoria->TIPO_DE_PRENDA}</option>
+            {/foreach}
+            </select>
+        <button type="submit"> Elegir </button>
+    </form>

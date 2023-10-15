@@ -17,4 +17,14 @@ class categoriesController {
         $categories = $this->model->getCategories();
         $this->view->showCategories($categories);
     }
+
+
+    function filter(){
+        if(isset ($_POST['selected'])&&(!empty($_POST['selected']))){
+            $selected = $_POST['selected'];
+            $ProductAndCategorie = $this->model->getProductAndCategorie($selected);
+            $this->view->showResultFilter($ProductAndCategorie);
+        }
+    }
+
 }

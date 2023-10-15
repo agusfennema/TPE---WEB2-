@@ -37,23 +37,17 @@ switch($params[0]){
         $productsController->addProducts();
         break;    
     case 'login':
-<<<<<<< HEAD
         $authController = new authController();
         $authController->showLogin();     
         break;
     case 'logout':
         $authController = new authController();
-        $authController->userLogout();
+        $authController->logout();
         break;
     case 'validate':
         $authController = new authController();
         $authController->auth();
-        break;    
-=======
-        $loginController = new loginController();
-        $loginController->showLogin();     
         break;
->>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
     case 'delete':
         $productsController = new productsController();
         $ID_producto = $params[1];
@@ -64,16 +58,16 @@ switch($params[0]){
         $productsController->showFormEdit();
         $ID_producto = $params[1];
         $productsController->editProduct($ID_producto);
-<<<<<<< HEAD
         break;  
     case 'detalle':
         $productsController = new productsController();
         $ID_producto = $params[1];
         $productsController->showProductDetails($ID_producto);
-        break;       
-=======
-        break;      
->>>>>>> bfa6b33f3f117d78381b4b960356e4f6ac648c82
+        break;  
+    case 'filter':
+        $categoriesController = new categoriesController();
+        $categoriesController->filter();
+        break;          
     default:
         echo('404 page not found');
         break;
