@@ -1,5 +1,6 @@
 <?php
 require_once 'app/models/products.model.php';
+require_once 'app/models/categories.model.php';
 require_once 'app/views/products.view.php';
 require_once 'app/helpers/auth.helper.php';
 

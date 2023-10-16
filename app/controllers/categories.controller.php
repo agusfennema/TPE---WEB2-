@@ -25,5 +25,24 @@ class categoriesController {
             $this->view->showResultFilter($ProductAndCategorie);
         }
     }
+    function addCategorie() {
+        // validar entrada de datos
+        authHelper::verify();
+        $ID_categoria = $_POST['ID_categoria'];
+        $TIPO_DE_PRENDA = $_POST['TIPO_DE_PRENDA'];
+        $DETALLE = $_POST['DETALLE'];
+  
+        $this->model->insertProduct($ID_categoria, $TIPO_DE_PRENDA, $DETALLE);
+        header("Location: " . BASE_URL. "categories"); 
+    }
 
+// Funcion borrar categoria
+    function deleteCategorie($ID_categoria) {
+        authHelper::verify();
+        $this->model->deleteCategorieById($ID_categoria);
+        header("Location: " . BASE_URL. "categories"); 
+    }
 }
+
+// Funcion para update/editar/actualizar categoria
+

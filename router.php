@@ -71,4 +71,13 @@ switch($params[0]){
     default:
         echo('404 page not found');
         break;
+    case 'addCategorie':
+        $categoriesController = new categoriesController();
+        $categoriesController->addCategorie();
+        break; 
+    case 'deleteCategorie':
+        $categoriasController = new categoriesController();
+        $ID_categoria = $params[1];
+        $categoriesController->deleteCategorieById($ID_categoria);
+        break;   
 }

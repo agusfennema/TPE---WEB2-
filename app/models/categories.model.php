@@ -15,7 +15,7 @@ class categoriesModel {
         return $categories;
     }
 
-
+/* OBTIENE PRODUCTOS Y CATEGORIAS */
     function getProductAndCategorie($selected){
         $query = $this->db->prepare("SELECT * FROM producto a INNER JOIN  categoria b ON a.ID_categoria_fk = b.ID_categoria WHERE a.ID_categoria_fk=?");
         $query->execute(array($selected));
@@ -24,3 +24,19 @@ class categoriesModel {
         return $ProductAndCategorie;
     }
 }
+
+/* INSERTA UNA CATEGORIA */
+function insertCategories($ID_categoria, $TIPO_DE_PRENDA, $DETALLE) {
+    $query = $this->db->prepare('INSERT INTO categoria (ID_categoria, TIPO_DE_PRENDA, DETALLE) VALUES (?, ?, ?)');
+    $query->execute([$ID_categoria, $TIPO_DE_PRENDA, $DETALLE]);
+
+    return $this->db->lastInsertId();
+}
+
+/* FUNCION PARA BORRAR POR ID LA CATEGORIA*/ 
+function deleteCategorieById($ID_categoria) {
+    $query = $this->db->prepare("DELETE FROM categoria WHERE ID_categoria = ?");
+    $query->execute([$ID_categoria]);
+}
+
+/* FUNCION PARA EDITAR CATEGORIAS */
