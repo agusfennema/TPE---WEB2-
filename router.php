@@ -55,7 +55,7 @@ switch($params[0]){
         break;
     case 'edit':
         $productsController = new productsController();
-            if((empty($_POST['TIPO']&&!isset($_POST['TIPO']))
+        if ((empty($_POST['TIPO']) && !isset($_POST['TIPO']))
                 &&(empty($POST['TALLE'])&&!isset($_POST['TALLE']))
                 &&(empty($POST['PRECIO'])&&!isset($_POST['PRECIO']))){
 
