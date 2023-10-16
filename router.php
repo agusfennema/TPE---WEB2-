@@ -55,9 +55,15 @@ switch($params[0]){
         break;
     case 'edit':
         $productsController = new productsController();
-        $productsController->showFormEdit();
-        $ID_producto = $params[1];
-        $productsController->editProduct($ID_producto);
+            if((empty($_POST['TIPO']&&!isset($_POST['TIPO']))
+                &&(empty($POST['TALLE'])&&!isset($_POST['TALLE']))
+                &&(empty($POST['PRECIO'])&&!isset($_POST['PRECIO']))){
+
+        $productsController->showFormEdit($params[1]);
+                }else{
+                    $newProduct = $_POST;
+                    $productsController->editProduct($ID_producto,$newProduct);
+                }
         break;  
     case 'detalle':
         $productsController = new productsController();
@@ -78,6 +84,6 @@ switch($params[0]){
         $categoriesController->deleteCategorie($ID_categoria);
         break; 
     default:
-    echo('404 page not found');
-    break;  
+        echo('404 page not found');
+        break;  
 }
