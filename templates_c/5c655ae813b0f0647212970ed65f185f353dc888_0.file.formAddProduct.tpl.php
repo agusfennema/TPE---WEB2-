@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-16 21:46:11
+/* Smarty version 4.3.2, created on 2023-10-16 22:33:29
   from 'C:\xampp\htdocs\TPE---WEB2-\templates\formAddProduct.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_652d930319e324_04916524',
+  'unifunc' => 'content_652d9e19ed6893_92659083',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5c655ae813b0f0647212970ed65f185f353dc888' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE---WEB2-\\templates\\formAddProduct.tpl',
-      1 => 1697485567,
+      1 => 1697485582,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652d930319e324_04916524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652d9e19ed6893_92659083 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <!-- Se crea un formulario para insertar nuevos productos a la tabla  -->
 <form class="formulario" action="add" method="POST">
     <div>
         <label class="form-label">Categoria</label>
-        <input type="select" name="ID_categoria_fk" class="form-control">
+        <input type="text" name="ID_categoria_fk" class="form-control">
     </div>
       <div>
         <label class="form-label">Tipo</label>

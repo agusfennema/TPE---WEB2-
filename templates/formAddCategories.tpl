@@ -1,7 +1,7 @@
-<form class="formulario" action="add" method="POST">
+<form class="formulario" action="addCategorie" method="POST">
     <div>
         <label class="form-label">Categoria</label>
-        <input type="text" name="ID_CATEGORIA" class="form-control">
+        <input type="text" name="ID_categoria" class="form-control">
     </div>
       <div>
         <label class="form-label">Tipo de prenda</label>

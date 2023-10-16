@@ -18,8 +18,8 @@
       <td>{$categoria->TIPO_DE_PRENDA}</td>
       <td>{$categoria->DETALLE}</td>
       {if verify}
-      <td><a href='deleteCategorie/{$categorie->ID_categoria}' type='button'>Borrar</a></td> 
-      <td><a href='editCategorie{$categorie->ID_categoria}/' type='button'>Editar</a></td> 
+      <td><a href='deleteCategorie/{$categoria->ID_categoria}' type='button'>Borrar</a></td> 
+      <td><a href='editCategorie{$categoria->ID_categoria}/' type='button'>Editar</a></td> 
       {/if}
       </tr>
       {/foreach}
@@ -32,6 +32,6 @@
                 <option value="{$categoria->ID_categoria}">{$categoria->TIPO_DE_PRENDA}</option>
             {/foreach}
             </select>
-        <button type="submit"> Elegir </button>
+        <button type="submit">Ver productos</button>
     </form>
     {include file="formAddCategories.tpl"}

@@ -1,15 +1,18 @@
 <?php
 require_once 'app/models/categories.model.php';
 require_once 'app/views/categories.view.php';
+require_once 'app/helpers/auth.helper.php';
 
 
 class categoriesController {
     private $model;
     private $view;
+    private $helper;
 
     public function __construct(){
         $this->model = new categoriesModel();
         $this->view = new categoriesView();
+        $this->helper = new authHelper();
     }
 /* OBTIENE LAS CATEGORIAS DEL MODEL (getCategories) Y LAS ASIGNA A LA FUNCION DE LA VIEW (showCategories)*/
     public function showCategories(){
@@ -31,8 +34,8 @@ class categoriesController {
         $ID_categoria = $_POST['ID_categoria'];
         $TIPO_DE_PRENDA = $_POST['TIPO_DE_PRENDA'];
         $DETALLE = $_POST['DETALLE'];
-  
-        $this->model->insertProduct($ID_categoria, $TIPO_DE_PRENDA, $DETALLE);
+
+        $this->model->insertCategorie($ID_categoria, $TIPO_DE_PRENDA, $DETALLE);
         header("Location: " . BASE_URL. "categories"); 
     }
 

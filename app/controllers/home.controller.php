@@ -2,6 +2,7 @@
 
 require 'app/views/home.view.php';
 
+
 class homeController{
     private $view;
   

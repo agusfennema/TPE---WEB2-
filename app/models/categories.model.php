@@ -23,20 +23,19 @@ class categoriesModel {
 
         return $ProductAndCategorie;
     }
+    /* INSERTA UNA CATEGORIA */
+    public function insertCategorie($ID_categoria, $TIPO_DE_PRENDA, $DETALLE) {
+        $query = $this->db->prepare('INSERT INTO categoria (ID_categoria, TIPO_DE_PRENDA, DETALLE) VALUES (?, ?, ?)');
+        $query->execute([$ID_categoria, $TIPO_DE_PRENDA, $DETALLE]);
+    
+        return $this->db->lastInsertId();
+    }
+    
+    /* FUNCION PARA BORRAR POR ID LA CATEGORIA*/ 
+     public function deleteCategorieById($ID_categoria) {
+        $query = $this->db->prepare("DELETE FROM categoria WHERE ID_categoria = ?");
+        $query->execute([$ID_categoria]);
+    }
+    
+    /* FUNCION PARA EDITAR CATEGORIAS */
 }
-
-/* INSERTA UNA CATEGORIA */
-function insertCategories($ID_categoria, $TIPO_DE_PRENDA, $DETALLE) {
-    $query = $this->db->prepare('INSERT INTO categoria (ID_categoria, TIPO_DE_PRENDA, DETALLE) VALUES (?, ?, ?)');
-    $query->execute([$ID_categoria, $TIPO_DE_PRENDA, $DETALLE]);
-
-    return $this->db->lastInsertId();
-}
-
-/* FUNCION PARA BORRAR POR ID LA CATEGORIA*/ 
-function deleteCategorieById($ID_categoria) {
-    $query = $this->db->prepare("DELETE FROM categoria WHERE ID_categoria = ?");
-    $query->execute([$ID_categoria]);
-}
-
-/* FUNCION PARA EDITAR CATEGORIAS */
