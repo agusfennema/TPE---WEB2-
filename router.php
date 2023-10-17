@@ -4,22 +4,20 @@ require_once 'app/controllers/products.controller.php';
 require_once 'app/controllers/categories.controller.php';
 require_once 'app/controllers/auth.controller.php';
 
+define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
-define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+// Leemos la acción que viene por parámetro
+$action = 'home'; // Acción por defecto
 
-
-//leemos la accion que viene por parametro
-$action = 'home'; //accion por defecto
-
-if(!empty($_GET['action'])){
+if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
 
-//parsea la accion ej: dev/juan --> ['dev', juan]
+// Parsea la acción ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
 
-//determina que camino seguir segun la accion
-switch($params[0]){
+// Determina qué camino seguir según la acción
+switch ($params[0]) {
     case 'home':
         $homeController = new homeController();
         $homeController->showHome();
@@ -31,14 +29,14 @@ switch($params[0]){
     case 'categories':
         $categoriesController = new categoriesController();
         $categoriesController->showCategories();
-        break;  
+        break;
     case 'add':
         $productsController = new productsController();
         $productsController->addProducts();
-        break;    
+        break;
     case 'login':
         $authController = new authController();
-        $authController->showLogin();     
+        $authController->showLogin();
         break;
     case 'logout':
         $authController = new authController();
@@ -55,35 +53,35 @@ switch($params[0]){
         break;
     case 'edit':
         $productsController = new productsController();
-        if ((empty($_POST['TIPO']) && !isset($_POST['TIPO']))
-                &&(empty($POST['TALLE'])&&!isset($_POST['TALLE']))
-                &&(empty($POST['PRECIO'])&&!isset($_POST['PRECIO']))){
-
-        $productsController->showFormEdit($params[1]);
-                }else{
-                    $newProduct = $_POST;
-                    $productsController->editProduct($ID_producto,$newProduct);
-                }
-        break;  
+        if (empty($_POST['TIPO']) && !isset($_POST['TIPO']) &&
+            empty($_POST['TALLE']) && !isset($_POST['TALLE']) &&
+            empty($_POST['PRECIO']) && !isset($_POST['PRECIO'])) {
+            $productsController->showFormEdit($params[1]);
+        } else {
+            $newProduct = $_POST;
+            $productsController->editProduct($ID_producto, $newProduct);
+        }
+        break;
     case 'detalle':
         $productsController = new productsController();
         $ID_producto = $params[1];
         $productsController->showProductDetails($ID_producto);
-        break;  
+        break;
     case 'filter':
         $categoriesController = new categoriesController();
         $categoriesController->filter();
-        break;          
+        break;
     case 'addCategorie':
         $categoriesController = new categoriesController();
         $categoriesController->addCategorie();
-        break; 
+        break;
     case 'deleteCategorie':
         $categoriesController = new categoriesController();
         $ID_categoria = $params[1];
         $categoriesController->deleteCategorie($ID_categoria);
-        break; 
+        break;
     default:
-        echo('404 page not found');
-        break;  
+        echo '404 page not found';
+        break;
 }
+?>
