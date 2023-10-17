@@ -45,7 +45,7 @@ class productsController {
         header("Location: " . BASE_URL. "products"); 
     }
 
-    function showFormEdit() {
+    function showFormEdit($ID_producto) {
         authHelper::verify();
         $this->view->showFormEdit();
     }

@@ -13,6 +13,25 @@ if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
 
+
+// home         ->  homeController->showHome();
+// products         ->  productsController->showProducts(); 
+// categories         ->  categoriesController->showCategories();
+// add         ->  productsController->addProducts();  
+// login         ->  authController->showLogin();
+// logout         ->  authController->Logout(); 
+// validate         ->  authController->auth(); 
+// delete         ->  productsController->deleteProduct(); 
+// edit         ->  productsController->showFormEdit();  
+// detalle         ->  productsController->showProductDetails(); 
+// filter         ->  categoriesController->filter(); 
+// addCategorie    ->  categoriesController->addCategorie();
+// deleteCategorie    ->  categoriesController->deleteCategorie();
+
+
+
+
+ 
 // Parsea la acción ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
 
@@ -59,7 +78,7 @@ switch ($params[0]) {
             $productsController->showFormEdit($params[1]);
         } else {
             $newProduct = $_POST;
-            $productsController->editProduct($ID_producto, $newProduct);
+            $productsController->editProduct($ID_producto);
         }
         break;
     case 'detalle':
