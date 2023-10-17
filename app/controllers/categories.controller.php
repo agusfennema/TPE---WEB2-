@@ -16,6 +16,7 @@ class categoriesController {
     }
 /* OBTIENE LAS CATEGORIAS DEL MODEL (getCategories) Y LAS ASIGNA A LA FUNCION DE LA VIEW (showCategories)*/
     public function showCategories(){
+        session_start();
         $categories = $this->model->getCategories();
         $this->view->showCategories($categories);
     }

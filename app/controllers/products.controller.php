@@ -17,6 +17,7 @@ class productsController {
 
 /* OBTIENE LOS PRODUCTOS DEL MODEL (getProducts) Y LOS ASIGNA A LA FUNCION DE LA VIEW (showProducts)*/
     public function showProducts(){
+        session_start();
         $products = $this->model->getProducts();
         $this->view->showProducts($products);
     }
