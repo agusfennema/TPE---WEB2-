@@ -15,7 +15,7 @@
     </div>
     <div>
         <label>PRECIO</label>
-        <input type="text" name="PRECIO">
+        <input type="value" name="PRECIO">
     </div>
     <button class="btn" type="submit">Editar Producto</button>
 </form>
