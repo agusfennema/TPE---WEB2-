@@ -12,15 +12,15 @@
     </div>
       <div>
         <label class="form-label">TIPO</label>
-        <input type="text" name="TIPO" placeholder="Ingrese un tipo de prenda" class="form-control">
+        <input type="text" name="TIPO" placeholder="Ingrese un tipo de prenda" class="form-control" required>
     </div>
     <div>
         <label class="form-label">TALLE</label>
-        <input type="text" name="TALLE" class="form-control">
+        <input type="text" name="TALLE" class="form-control" required>
     </div>
     <div>
         <label class="form-label">PRECIO</label>
-        <input type="text" name="PRECIO" class="form-control">
+        <input type="text" name="PRECIO" class="form-control" required>
     </div>
         <button type="submit" class="btn-form-login">Agregar Producto</button>
     </form>

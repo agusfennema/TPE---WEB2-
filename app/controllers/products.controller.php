@@ -26,7 +26,7 @@ class productsController {
         $productDetails = $this->model->getproductDetails($ID_producto);
         $this->view->showDetails($productDetails);
       }
-
+// Funcion agregar producto
     function addProducts() {
         // validar entrada de datos
         authHelper::verify();
@@ -45,6 +45,7 @@ class productsController {
         $this->model->deleteProductById($ID_producto);
         header("Location: " . BASE_URL. "products"); 
     }
+
 
     function showFormEdit($ID_producto) {
         authHelper::verify();
