@@ -14,6 +14,11 @@ class authHelper {
         $_SESSION['USER_EMAIL'] = $user->email; 
     }
 
+    public static function logout() {
+        AuthHelper::init();
+        session_destroy();
+    }
+
 
     public static function verify() {
         authHelper::init();
