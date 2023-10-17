@@ -1,7 +1,7 @@
  <!-- Se crea un formulario para insertar nuevos productos a la tabla  -->
 <form class="formulario" action="add" method="POST">
     <div>
-        <label class="form-label">Categoria</label>
+        <label class="form-label">NUMERO CATEGORIA</label>
         <select name="ID_categoria_fk" class="form-control">
             <option value="1">1 - Remeras</option>
             <option value="2">2 - Medias</option>
@@ -11,8 +11,8 @@
         </select>
     </div>
       <div>
-        <label class="form-label">Tipo</label>
-        <input type="text" name="TIPO" class="form-control">
+        <label class="form-label">TIPO</label>
+        <input type="text" name="TIPO" placeholder="Ingrese un tipo de prenda" class="form-control">
     </div>
     <div>
         <label class="form-label">TALLE</label>

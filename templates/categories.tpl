@@ -25,7 +25,7 @@
       {/foreach}
     </tbody>
   </table>
-  <h3> Selecciona una categoria</h3>
+  <h3> Selecciona una categoria para ver los productos existentes</h3>
   <form method="POST" action="filter">
         <select name="selected" class="form-selected">                                              
             {foreach from=$categories item=$categoria }

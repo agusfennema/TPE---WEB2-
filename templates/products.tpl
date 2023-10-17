@@ -28,14 +28,14 @@
       {/foreach}
     </tbody>
   </table>
-      <h3> Selecciona un producto</h3>
+      <h3> Selecciona un producto para ver la categoria perteneciente</h3>
       <form method="POST" action="filter">
             <select name="selected" class="form-selected">                                              
                 {foreach from=$products item=$producto }
                     <option value="{$producto->ID_producto}">{$producto->TIPO}</option>
                 {/foreach}
                 </select>
-            <button type="submit">Ver productos</button>
+            <button type="submit">Ver categoria</button>
         </form>
   {include file="formAddProduct.tpl"}
   
