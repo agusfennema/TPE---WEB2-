@@ -46,6 +46,7 @@ class productsController {
     }
 
     function showFormEdit() {
+        authHelper::verify();
         $this->view->showFormEdit();
     }
 
