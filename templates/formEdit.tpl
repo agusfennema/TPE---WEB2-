@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<form class="form-edit" method="POST">
+<form action="edit" class="form-edit" method="POST">
     <div>
         <label>Categoria</label>
         <input type="text" name="ID_categoria_fk">
