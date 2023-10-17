@@ -12,9 +12,6 @@
                 <button type="submit" class="btn-form-login">Login</button>
             </div>
         </div>
-        <div class="button-form">
-            <div class="no-account">Don't have an account?</div>
-            <a href="validate" class="signup">Signup</a>
-        </div>
+        <div class="button-form"></div>
     </form>
 </div>

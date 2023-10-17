@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-16 00:59:00
+/* Smarty version 4.3.2, created on 2023-10-17 15:23:48
   from 'C:\xampp\htdocs\TPE---WEB2-\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_652c6eb41a6941_95375529',
+  'unifunc' => 'content_652e8ae4d55978_73175359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2fd0fc615e37415c2b895365ce08111eb3709aa5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE---WEB2-\\templates\\footer.tpl',
-      1 => 1697410737,
+      1 => 1697549023,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652c6eb41a6941_95375529 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e8ae4d55978_73175359 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer class="footer">
     <div class="container">
       <div>
@@ -34,8 +34,6 @@ function content_652c6eb41a6941_95375529 (Smarty_Internal_Template $_smarty_tpl)
           <h4>Enlaces Rápidos</h4>
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Catálogo</a></li>
-            <li><a href="#">Ofertas</a></li>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Contacto</a></li>
           </ul>
@@ -46,7 +44,6 @@ function content_652c6eb41a6941_95375529 (Smarty_Internal_Template $_smarty_tpl)
             <li><a href="#">Facebook</a></li>
             <li><a href="https://www.instagram.com/aguss_fennema/">Instagram</a></li>
             <li><a href="#">Twitter</a></li>
-            <li><a href="#">Pinterest</a></li>
           </ul>
         </div>
       </div>
