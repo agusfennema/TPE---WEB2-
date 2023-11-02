@@ -30,14 +30,17 @@ class productsController {
     function addProducts() {
         // validar entrada de datos
         authHelper::verify();
+        if((isset($_POST['ID_categoria_fk']) && ($_POST['TIPO']) && (isset($_POST['TALLE']) && (isset($_POST['PRECIO']))))) {
         $ID_categoria_fk = $_POST['ID_categoria_fk'];
         $TIPO = $_POST['TIPO'];
         $TALLE = $_POST['TALLE'];
         $PRECIO = $_POST['PRECIO'];
-  
+
         $this->model->insertProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
         header("Location: " . BASE_URL. "products"); 
     }
+    }
+
 
 // Funcion borrar producto
     function deleteProduct($ID_producto) {
