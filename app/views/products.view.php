@@ -18,8 +18,9 @@ class productsView {
         $this->smarty->display('templates/formEdit.tpl');
     }
 
-    function showEdit($productById) {
-        $this->smarty->assign('productById', $productById);
+    public function showError($error) {
+        $errores = $error;
+        require_once "templates/errores.tpl";
     }
 
     function showDetails($productById){

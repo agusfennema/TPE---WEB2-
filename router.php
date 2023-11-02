@@ -22,7 +22,8 @@ if (!empty($_GET['action'])) {
 // logout         ->  authController->Logout(); 
 // validate         ->  authController->auth(); 
 // delete         ->  productsController->deleteProduct(); 
-// edit         ->  productsController->showFormEdit();  
+// formActualizarProduct         ->  productsController->FormEditProduct();  
+// updateProduct                  -> productsController->updateProduct(); 
 // detalle         ->  productsController->showProductDetails(); 
 // detalleCategorie         ->  categoriesController->showCategorieDetails(); 
 // filter         ->  categoriesController->filter(); 
@@ -72,17 +73,14 @@ switch ($params[0]) {
         $ID_producto = $params[1];
         $productsController->deleteProduct($ID_producto);
         break;
-    // case 'edit':
-    //     $productsController = new productsController();
-    //     if (empty($_POST['TIPO']) && !isset($_POST['TIPO']) &&
-    //         empty($_POST['TALLE']) && !isset($_POST['TALLE']) &&
-    //         empty($_POST['PRECIO']) && !isset($_POST['PRECIO'])) {
-    //         $productsController->showFormEdit($params[1]);
-    //     } else {
-    //         $newProduct = $_POST;
-    //         $productsController->editProduct($ID_producto);
-    //     }
-    //     break;
+    case 'formActualizarProduct':
+        $productsController = new productsController();
+        $productsController->formEditProduct($params[1]);
+        break;
+    case 'updateProduct':
+        $productsController = new productsController();
+        $productsController->updateProduct($params[1]);
+        break;
     case 'detalle':
         $productsController = new productsController();
         $ID_producto = $params[1];

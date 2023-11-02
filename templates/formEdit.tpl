@@ -1,23 +1,16 @@
-<!-- {include file="header.tpl"}
+<?php require_once 'templates/header.tpl'; ?>
 
-<form action="edit" class="form-edit" method="POST">
-    <div>
-        <label>Categoria</label>
-        <input type="text" name="ID_categoria_fk">
-    </div>
-    <div>
-        <label>TIPO</label>
-        <input type="text" name="TIPO">
-    </div>
-    <div>
-        <label>TALLE</label>
-        <input type="text" name="TALLE">
-    </div>
-    <div>
-        <label>PRECIO</label>
-        <input type="value" name="PRECIO">
-    </div>
-    <button class="btn" type="submit">Editar Producto</button>
+<form action="updateProduct/<?= $products>ID_producto; ?>" method="post" required>
+    <label for="tipo">TIPO:</label>
+    <input type="text" class="form-control" id="TIPO" name="TIPO" value="<?= $products>TIPO; ?>" required>
+
+    <label class="form-label" for="talle">TALLE:</label>
+    <input type="text" class="form-control" id="TALLE" name="TALLE" value="<?= $products>TALLE; ?>" required>
+
+
+    <label for="precio">PRECIO:</label>
+    <input type="number" class="form-control" id="PRECIO" name="PRECIO" value="<?= $products->PRECIO; ?>" required>
+
+    <button class="btn btn-success" type="submit">Actualizar producto</button>
 </form>
-{include file="footer.tpl"}
- -->
+<?php require_once 'templates/footer.tpl'; ?>

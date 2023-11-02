@@ -22,11 +22,13 @@ class productsController {
         $this->view->showProducts($products);
     }
 
+/* FUNCION PARA MOSTRAR LOS DETALLES DE CADA PRODUCTO */
     public function showProductDetails($ID_producto){
         $productDetails = $this->model->getproductDetails($ID_producto);
         $this->view->showDetails($productDetails);
       }
-// Funcion agregar producto
+
+// FUNCION PARA AGREGAR PRODUCTO
     function addProducts() {
         // validar entrada de datos
         authHelper::verify();
@@ -39,8 +41,7 @@ class productsController {
         $this->model->insertProduct($ID_categoria_fk, $TIPO, $TALLE, $PRECIO);
         header("Location: " . BASE_URL. "products"); 
     }
-    }
-
+}
 
 // Funcion borrar producto
     function deleteProduct($ID_producto) {
@@ -69,8 +70,35 @@ class productsController {
     //     }
     // }
 
-    // function formEditProduct($ID_producto){
-    //     $productById = $this->model->getProductById($ID_producto);
-    //     $this->view->showFormEdit($productById);
-    // }
+        function formEditProduct($ID_producto){
+        $productById = $this->model->getProductById($ID_producto);
+        $this->view->showFormEdit($productById);
+}
+
+        public function updateProduct($ID_producto){
+            authHelper::verify();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $TIPO = $_POST['TIPO'];
+                $TALLE = $_POST['TALLE'];
+                $PRECIO = $_POST['PRECIO'];
+            try {
+                if (empty($TIPO) || empty($TALLE) || empty($PRECIO)) {
+                    $this->view->showError("Debe completar todos los campos");
+                    return;
+                }
+                $this->model->updateProduct($ID_producto, $TIPO, $TALLE, $PRECIO);
+                if ($ID_producto) {
+                    header('Location: ' . BASE_URL . 'products');
+                }
+            } catch (PDOException $e) {
+                $this->view->showError("No se puede actualizar: " . $e->getMessage());
+            }
+        } else {
+            $this->view->showError("Error al actualizar");
+        }
+        
+    }
+    
+
+
 }

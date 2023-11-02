@@ -10,6 +10,14 @@
             <option value="12">12 - Pantalon</option>
             <option value="13">13 - Buzos</option>
         </select>
+
+<!-- HABRIA QUE HACERLO ASI PERO NO ANDA!!!
+<select class="form-control" id="cliente" name="cliente" required>
+    <?php foreach ($clientes as $cliente) { ?>
+        <option value="<?= $cliente->id_cliente; ?>"><?= $cliente->nombre; ?></option>
+    <?php } ?>
+</select> -->
+
     </div>
       <div>
         <label class="form-label">TIPO</label>
