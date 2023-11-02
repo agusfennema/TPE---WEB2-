@@ -24,6 +24,7 @@ if (!empty($_GET['action'])) {
 // delete         ->  productsController->deleteProduct(); 
 // edit         ->  productsController->showFormEdit();  
 // detalle         ->  productsController->showProductDetails(); 
+// detalleCategorie         ->  categoriesController->showCategorieDetails(); 
 // filter         ->  categoriesController->filter(); 
 // addCategorie    ->  categoriesController->addCategorie();
 // deleteCategorie    ->  categoriesController->deleteCategorie();
@@ -71,21 +72,26 @@ switch ($params[0]) {
         $ID_producto = $params[1];
         $productsController->deleteProduct($ID_producto);
         break;
-    case 'edit':
-        $productsController = new productsController();
-        if (empty($_POST['TIPO']) && !isset($_POST['TIPO']) &&
-            empty($_POST['TALLE']) && !isset($_POST['TALLE']) &&
-            empty($_POST['PRECIO']) && !isset($_POST['PRECIO'])) {
-            $productsController->showFormEdit($params[1]);
-        } else {
-            $newProduct = $_POST;
-            $productsController->editProduct($ID_producto);
-        }
-        break;
+    // case 'edit':
+    //     $productsController = new productsController();
+    //     if (empty($_POST['TIPO']) && !isset($_POST['TIPO']) &&
+    //         empty($_POST['TALLE']) && !isset($_POST['TALLE']) &&
+    //         empty($_POST['PRECIO']) && !isset($_POST['PRECIO'])) {
+    //         $productsController->showFormEdit($params[1]);
+    //     } else {
+    //         $newProduct = $_POST;
+    //         $productsController->editProduct($ID_producto);
+    //     }
+    //     break;
     case 'detalle':
         $productsController = new productsController();
         $ID_producto = $params[1];
         $productsController->showProductDetails($ID_producto);
+        break;
+    case 'detalleCategorie':
+        $categoriesController = new categoriesController();
+        $ID_categoria = $params[1];
+        $categoriesController->showCategorieDetails($ID_categoria);
         break;
     case 'filter':
         $categoriesController = new categoriesController();

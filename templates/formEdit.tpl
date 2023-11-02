@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+<!-- {include file="header.tpl"}
 
 <form action="edit" class="form-edit" method="POST">
     <div>
@@ -20,4 +20,4 @@
     <button class="btn" type="submit">Editar Producto</button>
 </form>
 {include file="footer.tpl"}
-
+ -->

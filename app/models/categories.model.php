@@ -15,6 +15,14 @@ class categoriesModel {
         return $categories;
     }
 
+    public function getCategorieDetails($ID_categoria){
+        $query = $this->db->prepare("SELECT * FROM categoria WHERE ID_categoria = ?");
+        $query->execute([$ID_categoria]);
+        $categorieById = $query->fetchAll(PDO::FETCH_OBJ);    
+        
+        return $categorieById;
+    }
+
 /* OBTIENE PRODUCTOS Y CATEGORIAS */
     function getProductAndCategorie($selected){
         $query = $this->db->prepare("SELECT * FROM producto a INNER JOIN  categoria b ON a.ID_categoria_fk = b.ID_categoria WHERE a.ID_categoria_fk=?");

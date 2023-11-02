@@ -21,6 +21,10 @@ class categoriesController {
         $this->view->showCategories($categories);
     }
 
+    public function showCategorieDetails($ID_categoria){
+        $categorieDetails = $this->model->getcategorieDetails($ID_categoria);
+        $this->view->showDetailsCategorie($categorieDetails);
+      }
 
     function filter(){
         if(isset ($_POST['selected'])&&(!empty($_POST['selected']))){
@@ -29,6 +33,7 @@ class categoriesController {
             $this->view->showResultFilter($ProductAndCategorie);
         }
     }
+    
     function addCategorie() {
         // validar entrada de datos
         authHelper::verify();

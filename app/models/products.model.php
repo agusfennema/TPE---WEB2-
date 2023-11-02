@@ -50,11 +50,11 @@ function getCategorieAndProduct($selected){ // ARREGLAR ESTO <3 !!!!!
     }
     
 // FUNCION PARA ACTUALIZAR LOS PRODUCTOS DE LA TABLA
-    public function updateProduct($ID_producto, $TIPO, $TALLE, $PRECIO) {
-        $query = $this->getProductById($ID_producto);
-        $query = $this->db->prepare('UPDATE producto SET TIPO=?, TALLE=?, PRECIO=? WHERE ID_producto=?');
-        $query->execute([$TIPO, $TALLE, $PRECIO, $ID_producto]);
-    }
+//    public function updateProduct($ID_producto, $TIPO, $TALLE, $PRECIO) {
+ //       $query = $this->getProductById($ID_producto);
+   //     $query = $this->db->prepare('UPDATE producto SET TIPO=?, TALLE=?, PRECIO=? WHERE ID_producto=?');
+     //   $query->execute([$TIPO, $TALLE, $PRECIO, $ID_producto]);
+    // }
 
     public function getproductDetails($ID_producto){
         $query = $this->db->prepare("SELECT * FROM producto WHERE ID_producto = ?");
