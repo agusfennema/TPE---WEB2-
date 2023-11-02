@@ -2,7 +2,8 @@
 <form class="formulario" action="add" method="POST">
     <div>
         <label class="form-label">NUMERO CATEGORIA</label>
-        <select name="ID_categoria_fk" class="form-control">
+        <select name="ID_categoria_fk" class="form-control"> 
+    <!--acomodar esto para que no sea hardcodeado-->
             <option value="1">1 - Remeras</option>
             <option value="2">2 - Medias</option>
             <option value="11">11 - Camperas</option>

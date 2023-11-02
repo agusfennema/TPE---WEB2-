@@ -27,6 +27,7 @@ if (!empty($_GET['action'])) {
 // filter         ->  categoriesController->filter(); 
 // addCategorie    ->  categoriesController->addCategorie();
 // deleteCategorie    ->  categoriesController->deleteCategorie();
+// editCategorie    ->  categoriesController->editCategorie();
 
 
 

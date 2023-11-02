@@ -22,6 +22,7 @@ table {
     align-items: center;
     border-collapse: collapse;
     padding-top: 50px;
+    margin-top: 10px;
 }
 
 td {

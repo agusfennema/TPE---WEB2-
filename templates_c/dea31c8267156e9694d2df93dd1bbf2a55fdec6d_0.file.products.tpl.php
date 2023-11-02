@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-17 19:28:20
+/* Smarty version 4.3.2, created on 2023-10-22 23:37:40
   from 'C:\xampp\htdocs\TPE---WEB2-\templates\products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_652ec434063266_08990060',
+  'unifunc' => 'content_65359624ac7891_85558548',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dea31c8267156e9694d2df93dd1bbf2a55fdec6d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE---WEB2-\\templates\\products.tpl',
-      1 => 1697563697,
+      1 => 1698010644,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:formAddProduct.tpl' => 1,
   ),
 ),false)) {
-function content_652ec434063266_08990060 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65359624ac7891_85558548 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<table class="table">
+<table class="tableProduct">
     <thead>
       <tr>
-      <th scope='col'>#</th>
+      <th class='col'>#</th>
+      <th scope='col'>Categoria</th>
       <th scope='col'>Producto</th>
       <th scope='col'>Talle</th>
       <th scope='col'>Precio</th>
@@ -46,11 +47,13 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['product']->value
 $_smarty_tpl->tpl_vars['product']->do_else = false;
 ?>
       <tr>
-      <td><?php echo $_smarty_tpl->tpl_vars['product']->value->ID_producto;?>
+        <td><?php echo $_smarty_tpl->tpl_vars['product']->value->ID_categoria_fk;?>
 </td>
-      <td><?php echo $_smarty_tpl->tpl_vars['product']->value->TIPO;?>
+        <td><?php echo $_smarty_tpl->tpl_vars['product']->value->ID_producto;?>
 </td>
-      <td><?php echo $_smarty_tpl->tpl_vars['product']->value->TALLE;?>
+        <td><?php echo $_smarty_tpl->tpl_vars['product']->value->TIPO;?>
+</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['product']->value->TALLE;?>
 </td>
       <td><span>$</span><?php echo $_smarty_tpl->tpl_vars['product']->value->PRECIO;?>
 </td>
@@ -68,24 +71,6 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </tbody>
   </table>
-      <h3> Selecciona un producto para ver la categoria perteneciente</h3>
-      <form method="POST" action="filter">
-            <select name="selected" class="form-selected">                                              
-                <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'producto');
-$_smarty_tpl->tpl_vars['producto']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
-$_smarty_tpl->tpl_vars['producto']->do_else = false;
-?>
-                    <option value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->ID_producto;?>
-"><?php echo $_smarty_tpl->tpl_vars['producto']->value->TIPO;?>
-</option>
-                <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                </select>
-            <button type="submit">Ver categoria</button>
-        </form>
   <?php $_smarty_tpl->_subTemplateRender("file:formAddProduct.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <?php }

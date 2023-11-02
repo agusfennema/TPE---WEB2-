@@ -1,9 +1,10 @@
 {include file="header.tpl"}
 
-<table class="table">
+<table class="tableProduct">
     <thead>
       <tr>
-      <th scope='col'>#</th>
+      <th class='col'>#</th>
+      <th scope='col'>Categoria</th>
       <th scope='col'>Producto</th>
       <th scope='col'>Talle</th>
       <th scope='col'>Precio</th>
@@ -15,9 +16,10 @@
     <tbody>
     {foreach from=$products item=$product}
       <tr>
-      <td>{$product->ID_producto}</td>
-      <td>{$product->TIPO}</td>
-      <td>{$product->TALLE}</td>
+        <td>{$product->ID_categoria_fk}</td>
+        <td>{$product->ID_producto}</td>
+        <td>{$product->TIPO}</td>
+        <td>{$product->TALLE}</td>
       <td><span>$</span>{$product->PRECIO}</td>
       <td><a href='detalle/{$product->ID_producto}' type='button'>Detalles</a></td>
       {if verify}
@@ -28,14 +30,5 @@
       {/foreach}
     </tbody>
   </table>
-      <h3> Selecciona un producto para ver la categoria perteneciente</h3>
-      <form method="POST" action="filter">
-            <select name="selected" class="form-selected">                                              
-                {foreach from=$products item=$producto }
-                    <option value="{$producto->ID_producto}">{$producto->TIPO}</option>
-                {/foreach}
-                </select>
-            <button type="submit">Ver categoria</button>
-        </form>
   {include file="formAddProduct.tpl"}
   
