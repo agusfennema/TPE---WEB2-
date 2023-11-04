@@ -75,11 +75,13 @@ switch ($params[0]) {
         break;
     case 'formActualizarProduct':
         $productsController = new productsController();
-        $productsController->formEditProduct($params[1]);
+        $ID_producto = $params[1];
+        $productsController->formEditProduct($ID_producto);
         break;
     case 'updateProduct':
         $productsController = new productsController();
-        $productsController->updateProduct($params[1]);
+        $ID_producto = $params[1];
+        $productsController->updateProduct($ID_producto);
         break;
     case 'detalle':
         $productsController = new productsController();

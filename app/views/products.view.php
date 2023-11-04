@@ -15,6 +15,7 @@ class productsView {
     }
 
     function showFormEdit() {
+        $this->smarty->assign('products', $products);
         $this->smarty->display('templates/formEdit.tpl');
     }
 

@@ -1,11 +1,11 @@
 <?php require_once 'templates/header.tpl'; ?>
 
-<form action="updateProduct/<?= $products>ID_producto; ?>" method="post" required>
+<form action="updateProduct/<?= $products->ID_producto; ?>" method="post" required>
     <label for="tipo">TIPO:</label>
-    <input type="text" class="form-control" id="TIPO" name="TIPO" value="<?= $products>TIPO; ?>" required>
+    <input type="text" class="form-control" id="TIPO" name="TIPO" value="<?= $products->TIPO; ?>" required>
 
     <label class="form-label" for="talle">TALLE:</label>
-    <input type="text" class="form-control" id="TALLE" name="TALLE" value="<?= $products>TALLE; ?>" required>
+    <input type="text" class="form-control" id="TALLE" name="TALLE" value="<?= $products->TALLE; ?>" required>
 
 
     <label for="precio">PRECIO:</label>

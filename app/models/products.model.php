@@ -18,7 +18,7 @@ class productsModel {
 
 /* OBTIENE CATEGORIAS POR PRODUCTO */
 function getCategorieAndProduct($selected){ // ARREGLAR ESTO <3 !!!!!
-    $query = $this->db->prepare("SELECT producto.*, categoria.TIPO_DE_PRENDA * FROM producto a INNER JOIN categoria ON producto.ID_categoria_fk = categoria.ID_categoria WHERE producto.ID_producto = ?;");
+    $query = $this->db->prepare("SELECT producto. *, categoria.TIPO_DE_PRENDA  FROM producto a INNER JOIN categoria ON producto.ID_categoria_fk = categoria.ID_categoria WHERE producto.ID_producto = ?;");
     $query->execute(array($selected)); // no anda !!!!!!!!!
     $CategorieAndProduct = $query->fetchAll(PDO::FETCH_OBJ);
 
