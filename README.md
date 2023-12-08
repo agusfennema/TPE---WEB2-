@@ -1,9 +1,15 @@
-# TPE---WEB2-
+# TPE - WEB2
 
-Intregrantes: Agustina Fennema (agusfennema@gmail.com) y Marcos Lorenzo (jmlorenzo1993@gmail.com)
-Temática: Tienda de indumentaria
-Descripción: Nuestra página web es una tienda de indumentaria unisex, la cual incluye por el momento remeras de distintos colores, talles y precios.
+## Integrantes
+- Agustina Fennema: [agusfennema@gmail.com](mailto:agusfennema@gmail.com)
+- Marcos Lorenzo: [jmlorenzo1993@gmail.com](mailto:jmlorenzo1993@gmail.com)
 
-Diagrama DER: https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/DiagramaDER-Web2.png
+### Temática
+Tienda de indumentaria
 
-Código SQL: https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/comercial.sql
+### Descripción
+Nuestra página web es una tienda de indumentaria unisex que ofrece una variedad de remeras en distintos colores, talles y precios.
+
+### Recursos Adicionales
+- **Diagrama DER**: [Ver Diagrama DER](https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/DiagramaDER-Web2.png)
+- **Código SQL**: [Ver Código SQL](https://raw.githubusercontent.com/agusfennema/TPE---WEB2-/main/comercial.sql)
